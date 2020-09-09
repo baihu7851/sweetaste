@@ -1,0 +1,510 @@
+@charset "UTF-8";
+* {
+  font-family: "Noto Sans TC", sans-serif;
+  box-sizing: border-box;
+  color: #3F5D45;
+}
+
+a {
+  text-decoration: none;
+  display: block;
+}
+
+.header #bar {
+  display: none;
+  position: relative;
+}
+
+@media screen and (max-width: 599px) {
+  .wrap .header {
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+  }
+  .wrap .header .sweetaste {
+    margin: 3px 0;
+    background-image: url("../img/logotype-sm-dark.png");
+    background-position: center;
+    height: 18px;
+    width: 115px;
+  }
+  .wrap .header .navBar {
+    width: 100%;
+    background-color: #EAF0ED;
+    position: absolute;
+    top: 85px;
+    left: 0;
+    z-index: 1;
+    transition: 0.5s;
+    height: 0;
+    overflow: hidden;
+  }
+  .wrap .header .navBar a {
+    position: relative;
+    padding: 0 30px;
+    font-size: 20px;
+    overflow: hidden;
+    transition: 0.5s;
+  }
+  .wrap .header .navBar a:after {
+    content: "";
+    position: absolute;
+    bottom: 10px;
+    border-bottom: 0px solid #3F5D45;
+    width: 90%;
+    left: 5%;
+  }
+  .wrap .header #bar:checked ~ .navBar {
+    height: 180px;
+  }
+  .wrap .header #bar:checked ~ .navBar a {
+    padding: 20px 30px;
+  }
+  .wrap .header #bar:checked ~ .navBar a:after {
+    border-bottom: 2px solid #3F5D45;
+  }
+  .wrap .header #bar:checked ~ .navBar a:hover {
+    background-color: #3F5D45;
+    color: white;
+  }
+  .wrap .header #bar:checked ~ .navBar a:hover:after {
+    border-bottom: 2px solid white;
+  }
+  .wrap .centerImg {
+    margin-top: 86px;
+    position: relative;
+    background-image: url(https://bit.ly/2Qodh3Z);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 277px;
+  }
+  .wrap .centerImg .sm {
+    position: absolute;
+    padding: 30px;
+    right: 0;
+  }
+  .wrap .centerImg .lg {
+    display: none;
+  }
+  .wrap .content .menu {
+    margin-bottom: 30px;
+  }
+  .wrap .content .menu h2 {
+    background-color: #3F5D45;
+    color: white;
+  }
+  .wrap .content .menu a:hover {
+    background-color: #EAF0ED;
+  }
+  .wrap .content .menu .button {
+    width: 100%;
+    font-size: 24px;
+    line-height: 40px;
+    padding: 12px 0;
+    text-align: center;
+    border: 1px solid #eaf0ed;
+  }
+  .wrap .content .order {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .wrap .content .order .button {
+    width: 300px;
+    text-align: center;
+    border: 1px solid #eaf0ed;
+  }
+  .wrap .content .order .dessert {
+    position: relative;
+  }
+  .wrap .content .order .dessert .hot {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    writing-mode: vertical-lr;
+    padding: 10px;
+    font-size: 16px;
+    letter-spacing: 6px;
+    color: white;
+    background-color: #3F5D45;
+  }
+  .wrap .content .order .dessert .love {
+    position: absolute;
+    top: 19px;
+    right: 22px;
+  }
+  .wrap .content .order .dessertData {
+    max-width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .wrap .content .order .dessertData .name {
+    width: 173px;
+    font-size: 20px;
+    line-height: 20px;
+    padding: 18px 0;
+  }
+  .wrap .content .order .dessertData .price {
+    width: 127px;
+    font-size: 20px;
+    line-height: 24px;
+    padding: 16px 0;
+  }
+  .wrap .content .order .dessertData .buy {
+    font-size: 24px;
+    line-height: 20px;
+    padding: 22px 0;
+    background-color: #EAF0ED;
+    margin-bottom: 20px;
+  }
+  .wrap .content .order .dessertData .buy:hover {
+    background-color: #3F5D45;
+    color: white;
+  }
+  .wrap .page {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+  }
+  .wrap .page a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    font-size: 20px;
+    line-height: 20px;
+    border: 1px solid #EAF0ED;
+  }
+  .wrap .page a:hover {
+    background-color: #3F5D45;
+    color: white;
+  }
+  .wrap .page a:hover span {
+    color: white;
+  }
+
+  .subscription {
+    margin-top: 30px;
+    padding: 30px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: #3F5D45;
+  }
+  .subscription p {
+    margin-left: 20px;
+    font-size: 24px;
+    color: white;
+  }
+  .subscription .mail {
+    margin-top: 30px;
+    display: flex;
+    background-color: #EAF0ED;
+    background-color: #fee;
+  }
+  .subscription .mail .icon {
+    padding: 16px 20px;
+    background-color: #EAF0ED;
+  }
+  .subscription .mail input {
+    width: 100%;
+    border: none;
+    background-color: #EAF0ED;
+  }
+  .subscription .mail a.icon {
+    background-color: #FFE180;
+  }
+
+  .myData {
+    padding: 39px 30px 37px;
+    background-color: #EAF0ED;
+  }
+  .myData .text .logo {
+    margin-bottom: 39px;
+    background-image: url("../img/logotype-lg-dark.png");
+    background-position: center;
+    width: 171px;
+    height: 27px;
+  }
+  .myData .text p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .myData .img {
+    display: none;
+  }
+
+  .footer {
+    padding: 30px 30px;
+    background-color: #EAF0ED;
+  }
+  .footer .icon {
+    margin: 0 0 23px 8px;
+    display: block;
+  }
+  .footer p {
+    font-size: 16px;
+    line-height: 19px;
+  }
+}
+@media screen and (min-width: 600px) {
+  .wrap {
+    margin: auto;
+    max-width: 940px;
+  }
+  .wrap .header {
+    margin: 30px 0;
+    display: flex;
+  }
+  .wrap .header .topMenuBtn {
+    display: none;
+  }
+  .wrap .header h1 {
+    margin-right: auto;
+  }
+  .wrap .header h1 .sweetaste {
+    background-image: url("../img/logo-all-dark.png");
+    background-position: center;
+    height: 40px;
+    width: 220px;
+  }
+  .wrap .header .navBar {
+    display: flex;
+    justify-content: space-between;
+  }
+  .wrap .header .navBar li a {
+    margin: 0 30px;
+    font-size: 16px;
+    line-height: 40px;
+    align-items: center;
+    position: relative;
+  }
+  .wrap .header .navBar li a::after {
+    content: "";
+    position: absolute;
+    bottom: 5px;
+    border-bottom: 2px solid #3F5D45;
+    width: 0%;
+    transition: 0.4s;
+    left: 50%;
+  }
+  .wrap .header .navBar li a:hover:after {
+    left: -50%;
+    width: 200%;
+  }
+  .wrap .header .shopping_cart {
+    padding-left: 49px;
+  }
+  .wrap .header .shopping_cart span {
+    line-height: 40px;
+    position: relative;
+  }
+  .wrap .header .shopping_cart span::after {
+    content: "";
+    position: absolute;
+    bottom: 5px;
+    border-bottom: 2px solid #3F5D45;
+    width: 0%;
+    transition: 0.4s;
+    right: 0;
+  }
+  .wrap .header .shopping_cart span:hover:after {
+    width: 150%;
+  }
+  .wrap .centerImg {
+    margin-bottom: 60px;
+    background-image: url(https://bit.ly/2Qodh3Z);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    width: 100%;
+    height: 496px;
+  }
+  .wrap .centerImg .sm {
+    display: none;
+  }
+  .wrap .centerImg .lg {
+    position: absolute;
+    padding: 40px;
+    right: 0;
+  }
+  .wrap .content {
+    display: flex;
+    justify-content: space-between;
+  }
+  .wrap .content .menu h2 {
+    background-color: #3F5D45;
+    color: white;
+  }
+  .wrap .content .menu a:hover {
+    background-color: #EAF0ED;
+  }
+  .wrap .content .menu .button {
+    width: 300px;
+    font-size: 24px;
+    line-height: 40px;
+    padding: 12px 0;
+    text-align: center;
+    border: 1px solid #eaf0ed;
+  }
+  .wrap .content .order {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 620px;
+  }
+  .wrap .content .order .button {
+    width: 300px;
+    text-align: center;
+    border: 1px solid #eaf0ed;
+  }
+  .wrap .content .order .dessert {
+    position: relative;
+  }
+  .wrap .content .order .dessert .hot {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    writing-mode: vertical-lr;
+    padding: 10px;
+    font-size: 16px;
+    letter-spacing: 6px;
+    color: white;
+    background-color: #3F5D45;
+  }
+  .wrap .content .order .dessert .love {
+    position: absolute;
+    top: 19px;
+    right: 22px;
+  }
+  .wrap .content .order .dessertData {
+    max-width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .wrap .content .order .dessertData .name {
+    width: 173px;
+    font-size: 20px;
+    line-height: 20px;
+    padding: 18px 0;
+  }
+  .wrap .content .order .dessertData .price {
+    width: 127px;
+    font-size: 20px;
+    line-height: 24px;
+    padding: 16px 0;
+  }
+  .wrap .content .order .dessertData .buy {
+    font-size: 24px;
+    line-height: 20px;
+    padding: 22px 0;
+    background-color: #EAF0ED;
+    margin-bottom: 20px;
+  }
+  .wrap .content .order .dessertData .buy:hover {
+    background-color: #3F5D45;
+    color: white;
+  }
+  .wrap .page {
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .wrap .page a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    font-size: 20px;
+    line-height: 20px;
+    border: 1px solid #EAF0ED;
+  }
+  .wrap .page a:hover {
+    background-color: #3F5D45;
+    color: white;
+  }
+  .wrap .page a:hover span {
+    color: white;
+  }
+
+  .subscription {
+    margin-top: 60px;
+    padding: 30px 122px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3F5D45;
+  }
+  .subscription p {
+    margin: 0 auto 0 20px;
+    font-size: 24px;
+    color: white;
+  }
+  .subscription .mail {
+    display: flex;
+    background-color: #EAF0ED;
+  }
+  .subscription .mail .icon {
+    padding: 16px 20px;
+    background-color: #EAF0ED;
+  }
+  .subscription .mail input {
+    width: 252px;
+    border: none;
+    background-color: #EAF0ED;
+  }
+  .subscription .mail a.icon {
+    background-color: #FFE180;
+  }
+
+  .myData {
+    display: flex;
+    margin: 39px 122px 0;
+    justify-content: space-between;
+  }
+  .myData .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .myData .text .logo {
+    background-image: url("../img/logotype-lg-dark.png");
+    background-position: center;
+    width: 171px;
+    height: 27px;
+  }
+  .myData .text p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .myData .img {
+    background-image: url("../img/sm-今天是個吃甜點的好日子.png");
+    background-position: center;
+    width: 59px;
+    height: 219px;
+  }
+
+  .footer {
+    margin: 30px 122px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .footer .icon {
+    margin-right: 8px;
+    display: block;
+  }
+  .footer p {
+    font-size: 16px;
+    line-height: 19px;
+  }
+}

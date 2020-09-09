@@ -1,0 +1,880 @@
+* {
+    font-family: "Noto Sans TC", sans-serif;
+    box-sizing: border-box;
+    color: #3F5D45;
+}
+
+a {
+    text-decoration: none;
+    display: block;
+}
+
+.header {
+    #bar {
+        display: none;
+        position: relative;
+    }
+}
+
+@media screen and (max-width: 599px) {
+    .pc {
+        display: none;
+    }
+
+    .wrap {
+        .header {
+            padding: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-content: center;
+            background-color: white;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 2;
+
+
+            .sweetaste {
+                margin: 3px 0;
+                background-image: url("../img/logotype-sm-dark.png");
+                background-position: center;
+                height: 18px;
+                width: 115px;
+            }
+
+            .navBar {
+                width: 100%;
+                background-color: #EAF0ED;
+                position: absolute;
+                top: 85px;
+                left: 0;
+                z-index: 1;
+                transition: 0.5s;
+                height: 0;
+                overflow: hidden;
+
+                a {
+                    position: relative;
+                    padding: 0 30px;
+                    font-size: 20px;
+                    overflow: hidden;
+                    transition: 0.5s;
+
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        bottom: 10px;
+                        border-bottom: 0px solid #3F5D45;
+                        width: 90%;
+                        left: 5%;
+                    }
+                }
+            }
+
+            #bar:checked~.navBar {
+                height: 180px;
+
+                a {
+                    padding: 20px 30px;
+
+                    &:after {
+                        border-bottom: 2px solid #3F5D45;
+                    }
+
+                    &:hover {
+                        background-color: #3F5D45;
+                        color: white;
+
+                        &:after {
+                            border-bottom: 2px solid white;
+                        }
+
+                    }
+                }
+            }
+
+        }
+
+        .mainImg {
+            margin-top: 86px;
+            background-size: cover;
+            background-position: center;
+            height: 277px;
+        }
+
+        .contentCenter {
+            display: flex;
+            justify-content: center;
+
+            .maincontentCenter {
+                width: 100%;
+                display: flex;
+
+                li {
+                    height: 180px;
+                    width: 33.3%;
+                    position: relative;
+                    overflow: hidden;
+                    border-left: 1px solid white;
+
+                    a {
+                        display: flex;
+
+                        .bgImg {
+                            position: absolute;
+                            background-size: cover;
+                            background-position: center;
+                            height: 100%;
+                            width: 100%;
+                            transition: .5s;
+                            filter: blur(5px);
+                        }
+
+                        .bg {
+                            background: #3F5D45;
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            left: 0;
+                            bottom: 0;
+                            opacity: .8;
+                            transition: .5s;
+                            z-index: 1;
+                        }
+
+                        h2 {
+                            position: absolute;
+                            display: flex;
+                            justify-content: center;
+                            writing-mode: vertical-lr;
+                            left: 50%;
+                            margin-left: -10px;
+                            height: 100%;
+                            color: #FFFFFF;
+                            font-size: 20px;
+                            line-height: 24px;
+                            z-index: 2;
+                        }
+
+                        &:hover {
+                            .bgImg {
+                                filter: blur(1px);
+                            }
+
+                            .bg {
+                                opacity: .5;
+                                background: #FFE180;
+                            }
+
+                            h2 {
+                                color: #3F5D45;
+                                line-height: 30px;
+                                font-size: 24px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .why {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            .Img {
+                background-position: center;
+                background-size: cover;
+                height: 250px;
+                width: 100%;
+            }
+
+            .Word {
+                width: 100%;
+                background-color: #EAF0ED;
+                padding: 30px;
+
+                p {
+                    font-size: 16px;
+                    line-height: 32px;
+                    color: #809784;
+                }
+            }
+
+            h3 {
+                order: -1;
+                padding: 30px 0;
+            }
+
+            .commodity {
+                margin-bottom: 30px;
+                width: 315px;
+
+                .commodityView {
+                    position: relative;
+
+                    .comImg {
+                        width: 100%;
+                        height: 315px;
+
+                        .hot {
+                            position: absolute;
+                            top: 0;
+                            left: 20px;
+                            width: 38px;
+                            height: 107px;
+                            background-color: #3f5d45;
+
+                            &::after {
+                                content: "本日精選";
+                                position: absolute;
+                                writing-mode: vertical-lr;
+                                color: #eaf0ed;
+                                line-height: 20px;
+                                font-size: 16px;
+                                z-index: 1;
+                                padding: 20px 9px;
+                            }
+                        }
+
+                        .love {
+                            position: absolute;
+                            top: 19px;
+                            left: 270px;
+                        }
+                    }
+
+                }
+
+                .button {
+                    font-size: 20px;
+                    line-height: 20px;
+                    text-align: center;
+                    padding: 15px;
+                    border: 1px solid #EAF0ED;
+                }
+
+                .codata {
+                    display: flex;
+
+                    h3 {
+                        width: 58%;
+                    }
+
+                    p {
+                        width: 42%;
+                        line-height: 24px;
+                    }
+                }
+
+                .buy {
+                    background: #EAF0ED;
+                    font-size: 24px;
+                }
+            }
+        }
+
+        .menu {
+            .menuImg {
+                margin: 30px auto;
+                width: 209px;
+                height: 59px;
+                background-image: url("../img/sm-橫式-想吃甜點是不需要理由的.png");
+            }
+
+            .order {
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                max-width: 940px;
+
+                .button {
+                    width: 300px;
+                    text-align: center;
+                    border: 1px solid #eaf0ed;
+                }
+
+                .dessert {
+                    position: relative;
+
+                    .hot {
+                        position: absolute;
+                        top: 0;
+                        left: 20px;
+                        writing-mode: vertical-lr;
+                        padding: 10px;
+                        font-size: 16px;
+                        letter-spacing: 6px;
+                        color: white;
+                        background-color: #3F5D45;
+                    }
+
+                    .love {
+                        position: absolute;
+                        top: 19px;
+                        right: 22px;
+
+                    }
+                }
+
+                .dessertData {
+                    max-width: 300px;
+                    display: flex;
+                    flex-wrap: wrap;
+
+                    .name {
+                        width: 173px;
+                        font-size: 20px;
+                        line-height: 20px;
+                        padding: 18px 0;
+                    }
+
+                    .price {
+                        width: 127px;
+                        font-size: 20px;
+                        line-height: 24px;
+                        padding: 16px 0;
+                    }
+
+                    .buy {
+                        font-size: 24px;
+                        line-height: 20px;
+                        padding: 22px 0;
+                        background-color: #EAF0ED;
+                        margin-bottom: 20px;
+
+                        &:hover {
+                            background-color: #3F5D45;
+                            color: white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .subscription {
+        margin-top: 30px;
+        padding: 30px 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        background-color: #3F5D45;
+
+        p {
+            margin-left: 20px;
+            font-size: 24px;
+            color: white;
+        }
+
+        .mail {
+            margin-top: 30px;
+            display: flex;
+            background-color: #EAF0ED;
+            background-color: #fee;
+
+            .icon {
+                padding: 16px 20px;
+                background-color: #EAF0ED;
+            }
+
+            input {
+                width: 100%;
+                border: none;
+                background-color: #EAF0ED;
+            }
+
+            a.icon {
+                background-color: #FFE180;
+            }
+        }
+    }
+
+    .myData {
+        padding: 39px 30px 37px;
+        background-color: #EAF0ED;
+
+        .text {
+
+            .logo {
+                margin-bottom: 39px;
+                background-image: url("../img/logotype-lg-dark.png");
+                background-position: center;
+                width: 171px;
+                height: 27px;
+
+            }
+
+            p {
+                font-size: 16px;
+                line-height: 24px;
+            }
+        }
+
+        .img {
+            display: none;
+        }
+    }
+
+    .footer {
+        padding: 30px 30px;
+        background-color: #EAF0ED;
+
+        .icon {
+            margin: 0 0 23px 8px;
+            display: block;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 19px;
+        }
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .mo {
+        display: none;
+    }
+
+    .wrap {
+        margin: auto;
+        max-width: 940px;
+
+        .header {
+            margin: 30px 0;
+            display: flex;
+
+            .topMenuBtn {
+                display: none;
+            }
+
+            h1 {
+                margin-right: auto;
+
+                .sweetaste {
+                    background-image: url("../img/logo-all-dark.png");
+                    background-position: center;
+                    height: 40px;
+                    width: 220px;
+                }
+            }
+
+            .navBar {
+                display: flex;
+                justify-content: space-between;
+
+                li {
+                    a {
+                        margin: 0 30px;
+                        font-size: 16px;
+                        line-height: 40px;
+                        align-items: center;
+                        position: relative;
+
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            bottom: 5px;
+                            border-bottom: 2px solid #3F5D45;
+                            width: 0%;
+                            transition: 0.4s;
+                            left: 50%;
+                        }
+
+                        &:hover:after {
+                            left: -50%;
+                            width: 200%;
+                        }
+                    }
+                }
+            }
+
+            .shopping_cart {
+                padding-left: 49px;
+
+                span {
+                    line-height: 40px;
+                    position: relative;
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        bottom: 5px;
+                        border-bottom: 2px solid #3F5D45;
+                        width: 0%;
+                        transition: 0.4s;
+                        right: 0;
+                    }
+
+                    &:hover:after {
+                        width: 150%;
+                    }
+                }
+            }
+        }
+
+        .mainImg {
+            background-size: cover;
+            background-position: center;
+            height: 496px;
+        }
+
+        .contentCenter {
+            display: flex;
+            justify-content: center;
+            margin-top: -60px;
+
+            .maincontentCenter {
+                width: 85%;
+                display: flex;
+
+                li {
+                    height: 256px;
+                    width: 33.3%;
+                    position: relative;
+                    overflow: hidden;
+
+                    a {
+                        display: flex;
+
+                        .bgImg {
+                            position: absolute;
+                            background-size: cover;
+                            background-position: center;
+                            height: 100%;
+                            width: 100%;
+                            transition: .5s;
+                            filter: blur(5px);
+                        }
+
+                        .bg {
+                            background: #3F5D45;
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            left: 0;
+                            bottom: 0;
+                            opacity: .8;
+                            transition: .5s;
+                            z-index: 1;
+                        }
+
+                        h2 {
+                            position: absolute;
+                            display: flex;
+                            justify-content: center;
+                            writing-mode: vertical-lr;
+                            left: 50%;
+                            margin-left: -10px;
+                            height: 100%;
+                            color: #FFFFFF;
+                            font-size: 24px;
+                            line-height: 24px;
+                            z-index: 2;
+
+
+                        }
+
+                        &:hover {
+                            .bgImg {
+                                filter: blur(1px);
+                            }
+
+                            .bg {
+                                opacity: .5;
+                                background: #FFE180;
+                            }
+
+                            h2 {
+                                color: #3F5D45;
+                                line-height: 30px;
+                                font-size: 24px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .why {
+            display: flex;
+            margin-top: 60px;
+            justify-content: space-between;
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                margin: 20px;
+                width: 100vmax;
+                height: 420px;
+                background-color: #EAF0ED;
+                z-index: -1;
+                left: -100%;
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                margin: 20px;
+                width: 100vmax;
+                height: 420px;
+                background-color: #EAF0ED;
+                z-index: -1;
+
+            }
+
+            .Img {
+                background-position: center;
+                height: 460px;
+                width: 460px;
+            }
+
+            .Word {
+                writing-mode: vertical-rl;
+                padding: 90px 0px;
+                max-height: 460px;
+
+                p {
+                    font-size: 16px;
+                    line-height: 30px;
+                    color: #809784;
+                }
+            }
+
+            .eat.Img {
+                order: 3;
+            }
+
+            .commodity {
+                margin-bottom: 30px;
+                width: 315px;
+
+                .commodityView {
+                    position: relative;
+
+                    .comImg {
+                        width: 100%;
+                        height: 315px;
+
+                        .hot {
+                            position: absolute;
+                            top: 0;
+                            left: 20px;
+                            width: 38px;
+                            height: 107px;
+                            background-color: #3f5d45;
+
+                            &::after {
+                                content: "本日精選";
+                                position: absolute;
+                                writing-mode: vertical-lr;
+                                color: #eaf0ed;
+                                line-height: 20px;
+                                font-size: 16px;
+                                z-index: 1;
+                                padding: 20px 9px;
+                            }
+                        }
+
+                        .love {
+                            position: absolute;
+                            top: 19px;
+                            left: 270px;
+                        }
+                    }
+
+                }
+
+                .button {
+                    font-size: 20px;
+                    line-height: 20px;
+                    text-align: center;
+                    padding: 15px;
+                    border: 1px solid #EAF0ED;
+                }
+
+                .codata {
+                    display: flex;
+
+                    h3 {
+                        width: 58%;
+                    }
+
+                    p {
+                        width: 42%;
+                        line-height: 24px;
+                    }
+                }
+
+                .buy {
+                    background: #EAF0ED;
+                    font-size: 24px;
+                }
+            }
+        }
+
+        .menu {
+            .menuImg {
+                margin: 80px auto;
+                width: 89px;
+                height: 328px;
+                background-image: url("../img/lg-想吃甜點是不需要理由的.png");
+            }
+
+            .order {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                max-width: 940px;
+
+                .button {
+                    width: 300px;
+                    text-align: center;
+                    border: 1px solid #eaf0ed;
+                }
+
+                .dessert {
+                    position: relative;
+
+                    .hot {
+                        position: absolute;
+                        top: 0;
+                        left: 20px;
+                        writing-mode: vertical-lr;
+                        padding: 10px;
+                        font-size: 16px;
+                        letter-spacing: 6px;
+                        color: white;
+                        background-color: #3F5D45;
+                    }
+
+                    .love {
+                        position: absolute;
+                        top: 19px;
+                        right: 22px;
+
+                    }
+                }
+
+                .dessertData {
+                    max-width: 300px;
+                    display: flex;
+                    flex-wrap: wrap;
+
+                    .name {
+                        width: 173px;
+                        font-size: 20px;
+                        line-height: 20px;
+                        padding: 18px 0;
+                    }
+
+                    .price {
+                        width: 127px;
+                        font-size: 20px;
+                        line-height: 24px;
+                        padding: 16px 0;
+                    }
+
+                    .buy {
+                        font-size: 24px;
+                        line-height: 20px;
+                        padding: 22px 0;
+                        background-color: #EAF0ED;
+                        margin-bottom: 20px;
+
+                        &:hover {
+                            background-color: #3F5D45;
+                            color: white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .subscription {
+        margin-top: 60px;
+        padding: 30px 122px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #3F5D45;
+
+        p {
+            margin: 0 auto 0 20px;
+            font-size: 24px;
+            color: white;
+        }
+
+        .mail {
+            display: flex;
+            background-color: #EAF0ED;
+            width: 100%;
+
+            .icon {
+                padding: 16px 20px;
+                background-color: #EAF0ED;
+            }
+
+            input {
+                width: 252px;
+                border: none;
+                background-color: #EAF0ED;
+            }
+
+            a.icon {
+                background-color: #FFE180;
+            }
+        }
+    }
+
+    .myData {
+        display: flex;
+        margin: 39px 122px 0;
+        justify-content: space-between;
+
+        .text {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .logo {
+                background-image: url("../img/logotype-lg-dark.png");
+                background-position: center;
+                width: 171px;
+                height: 27px;
+            }
+
+            p {
+                font-size: 16px;
+                line-height: 24px;
+            }
+        }
+
+        .img {
+            background-image: url("../img/sm-今天是個吃甜點的好日子.png");
+            background-position: center;
+            width: 59px;
+            height: 219px;
+        }
+    }
+
+    .footer {
+        margin: 30px 122px;
+        display: flex;
+        justify-content: space-between;
+
+        .icon {
+            margin-right: 8px;
+            display: block;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 19px;
+        }
+    }
+}

@@ -1,0 +1,455 @@
+@charset "UTF-8";
+* {
+  font-family: "Noto Sans TC", sans-serif;
+  box-sizing: border-box;
+  color: #3F5D45;
+}
+
+a {
+  text-decoration: none;
+  display: block;
+}
+
+.header #bar {
+  display: none;
+  position: relative;
+}
+
+@media screen and (max-width: 599px) {
+  .wrap .header {
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+  }
+  .wrap .header .sweetaste {
+    margin: 3px 0;
+    background-image: url("../img/logotype-sm-dark.png");
+    background-position: center;
+    height: 18px;
+    width: 115px;
+  }
+  .wrap .header .navBar {
+    width: 100%;
+    background-color: #EAF0ED;
+    position: absolute;
+    top: 85px;
+    left: 0;
+    z-index: 1;
+    transition: 0.5s;
+    height: 0;
+    overflow: hidden;
+  }
+  .wrap .header .navBar a {
+    position: relative;
+    padding: 0 30px;
+    font-size: 20px;
+    overflow: hidden;
+    transition: 0.5s;
+  }
+  .wrap .header .navBar a:after {
+    content: "";
+    position: absolute;
+    bottom: 10px;
+    border-bottom: 0px solid #3F5D45;
+    width: 90%;
+    left: 5%;
+  }
+  .wrap .header #bar:checked ~ .navBar {
+    height: 180px;
+  }
+  .wrap .header #bar:checked ~ .navBar a {
+    padding: 20px 30px;
+  }
+  .wrap .header #bar:checked ~ .navBar a:after {
+    border-bottom: 2px solid #3F5D45;
+  }
+  .wrap .header #bar:checked ~ .navBar a:hover {
+    background-color: #3F5D45;
+    color: white;
+  }
+  .wrap .header #bar:checked ~ .navBar a:hover:after {
+    border-bottom: 2px solid white;
+  }
+
+  .content {
+    margin-top: 86px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .content .loginpage {
+    width: 100%;
+  }
+  .content .loginpage .loginData {
+    background-color: #3F5D45;
+  }
+  .content .loginpage .loginData h2 {
+    color: #EAF0ED;
+    font-size: 36px;
+    line-height: 36px;
+    padding: 40px 0;
+    text-align: center;
+  }
+  .content .loginpage .loginData .name {
+    display: flex;
+    background-color: #EAF0ED;
+    margin: 0 30px 16px;
+  }
+  .content .loginpage .loginData .name .icon {
+    padding: 16px 20px;
+    background-color: #EAF0ED;
+  }
+  .content .loginpage .loginData .name input {
+    width: 100%;
+    border: none;
+    background-color: #EAF0ED;
+  }
+  .content .loginpage .loginData .password {
+    display: flex;
+    background-color: #EAF0ED;
+    margin: 0 30px 16px;
+  }
+  .content .loginpage .loginData .password .icon {
+    padding: 16px 20px;
+    background-color: #EAF0ED;
+  }
+  .content .loginpage .loginData .password input {
+    width: 100%;
+    border: none;
+    background-color: #EAF0ED;
+  }
+  .content .loginpage .loginData .checkbox {
+    margin: 16px 30px 25px;
+  }
+  .content .loginpage .loginData .checkbox label {
+    color: white;
+  }
+  .content .loginpage .loginBtn a {
+    background-color: #FFE180;
+    padding: 16px 0;
+  }
+  .content .loginpage .loginBtn a:hover {
+    background-color: #ffd54d;
+  }
+  .content .loginpage .loginBtn a p {
+    text-align: center;
+    font-size: 24px;
+    line-height: 36px;
+    color: #3F5D45;
+  }
+  .content .link {
+    order: -1;
+    width: 100%;
+    padding: 30px 0;
+    background-color: #EAF0ED;
+  }
+  .content .link p {
+    display: none;
+  }
+  .content .link .linkImg {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+  .content .link .linkImg div {
+    border: 1px solid #EAF0ED;
+    text-align: center;
+    width: 105px;
+    height: 56px;
+    line-height: 56px;
+    background-color: white;
+  }
+
+  .subscription {
+    margin-top: 30px;
+    padding: 30px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: #3F5D45;
+  }
+  .subscription p {
+    margin-left: 20px;
+    font-size: 24px;
+    color: white;
+  }
+  .subscription .mail {
+    margin-top: 30px;
+    display: flex;
+    background-color: #EAF0ED;
+    background-color: #fee;
+  }
+  .subscription .mail .icon {
+    padding: 16px 20px;
+    background-color: #EAF0ED;
+  }
+  .subscription .mail input {
+    width: 100%;
+    border: none;
+    background-color: #EAF0ED;
+  }
+  .subscription .mail a.icon {
+    background-color: #FFE180;
+  }
+
+  .myData {
+    padding: 39px 30px 37px;
+    background-color: #EAF0ED;
+  }
+  .myData .text .logo {
+    margin-bottom: 39px;
+    background-image: url("../img/logotype-lg-dark.png");
+    background-position: center;
+    width: 171px;
+    height: 27px;
+  }
+  .myData .text p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .myData .img {
+    display: none;
+  }
+
+  .footer {
+    padding: 30px 30px;
+    background-color: #EAF0ED;
+  }
+  .footer .icon {
+    margin: 0 0 23px 8px;
+    display: block;
+  }
+  .footer p {
+    font-size: 16px;
+    line-height: 19px;
+  }
+}
+@media screen and (min-width: 600px) {
+  .wrap {
+    margin: auto;
+    max-width: 940px;
+    position: relative;
+  }
+  .wrap .header {
+    margin: 30px 0;
+    display: flex;
+  }
+  .wrap .header .topMenuBtn {
+    display: none;
+  }
+  .wrap .header h1 {
+    margin-right: auto;
+  }
+  .wrap .header h1 .sweetaste {
+    background-image: url("../img/logo-all-dark.png");
+    background-position: center;
+    height: 40px;
+    width: 220px;
+  }
+  .wrap .header .navBar {
+    display: flex;
+    justify-content: space-between;
+  }
+  .wrap .header .navBar li a {
+    margin: 0 30px;
+    font-size: 16px;
+    line-height: 40px;
+    align-items: center;
+    position: relative;
+  }
+  .wrap .header .navBar li a::after {
+    content: "";
+    position: absolute;
+    bottom: 5px;
+    border-bottom: 2px solid #3F5D45;
+    width: 0%;
+    transition: 0.4s;
+    left: 50%;
+  }
+  .wrap .header .navBar li a:hover:after {
+    left: -50%;
+    width: 200%;
+  }
+  .wrap .header .shopping_cart {
+    padding-left: 49px;
+  }
+  .wrap .header .shopping_cart span {
+    line-height: 40px;
+    position: relative;
+  }
+  .wrap .header .shopping_cart span::after {
+    content: "";
+    position: absolute;
+    bottom: 5px;
+    border-bottom: 2px solid #3F5D45;
+    width: 0%;
+    transition: 0.4s;
+    right: 0;
+  }
+  .wrap .header .shopping_cart span:hover:after {
+    width: 150%;
+  }
+
+  .content {
+    margin: 60px 80px;
+    display: flex;
+  }
+  .content .loginpage {
+    width: 100%;
+  }
+  .content .loginpage .loginData {
+    background-color: #3F5D45;
+  }
+  .content .loginpage .loginData h2 {
+    color: #EAF0ED;
+    font-size: 36px;
+    line-height: 36px;
+    padding: 40px 0;
+    text-align: center;
+  }
+  .content .loginpage .loginData .name {
+    display: flex;
+    background-color: #EAF0ED;
+    margin: 0 30px 16px;
+  }
+  .content .loginpage .loginData .name .icon {
+    padding: 16px 20px;
+    background-color: #EAF0ED;
+  }
+  .content .loginpage .loginData .name input {
+    width: 100%;
+    border: none;
+    background-color: #EAF0ED;
+  }
+  .content .loginpage .loginData .password {
+    display: flex;
+    background-color: #EAF0ED;
+    margin: 0 30px 16px;
+  }
+  .content .loginpage .loginData .password .icon {
+    padding: 16px 20px;
+    background-color: #EAF0ED;
+  }
+  .content .loginpage .loginData .password input {
+    width: 100%;
+    border: none;
+    background-color: #EAF0ED;
+  }
+  .content .loginpage .loginData .checkbox {
+    margin: 16px 30px 25px;
+  }
+  .content .loginpage .loginData .checkbox label {
+    color: white;
+  }
+  .content .loginpage .loginBtn a {
+    background-color: #FFE180;
+    padding: 16px 0;
+  }
+  .content .loginpage .loginBtn a:hover {
+    background-color: #ffd54d;
+  }
+  .content .loginpage .loginBtn a p {
+    text-align: center;
+    font-size: 24px;
+    line-height: 36px;
+    color: #3F5D45;
+  }
+  .content .link {
+    margin: 15px 0;
+    padding: 40px 30px;
+    width: 100%;
+    background-color: #EAF0ED;
+  }
+  .content .link p {
+    font-size: 24px;
+    line-height: 36px;
+    color: #8DA291;
+    text-align: center;
+    margin-bottom: 36px;
+  }
+  .content .link .linkImg div {
+    margin-top: 16px;
+    text-align: center;
+    width: 100%;
+    height: 56px;
+    line-height: 56px;
+    background-color: white;
+  }
+
+  .subscription {
+    margin-top: 60px;
+    padding: 30px 122px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3F5D45;
+  }
+  .subscription p {
+    margin: 0 auto 0 20px;
+    font-size: 24px;
+    color: white;
+  }
+  .subscription .mail {
+    display: flex;
+    background-color: #EAF0ED;
+  }
+  .subscription .mail .icon {
+    padding: 16px 20px;
+    background-color: #EAF0ED;
+  }
+  .subscription .mail input {
+    width: 252px;
+    border: none;
+    background-color: #EAF0ED;
+  }
+  .subscription .mail a.icon {
+    background-color: #FFE180;
+  }
+
+  .myData {
+    display: flex;
+    margin: 39px 122px 0;
+    justify-content: space-between;
+  }
+  .myData .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .myData .text .logo {
+    background-image: url("../img/logotype-lg-dark.png");
+    background-position: center;
+    width: 171px;
+    height: 27px;
+  }
+  .myData .text p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .myData .img {
+    background-image: url("../img/sm-今天是個吃甜點的好日子.png");
+    background-position: center;
+    width: 59px;
+    height: 219px;
+  }
+
+  .footer {
+    margin: 30px 122px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .footer .icon {
+    margin-right: 8px;
+    display: block;
+  }
+  .footer p {
+    font-size: 16px;
+    line-height: 19px;
+  }
+}
