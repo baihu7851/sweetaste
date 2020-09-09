@@ -1,5 +1,4 @@
 @charset "UTF-8";
-
 * {
   font-family: "Noto Sans TC", sans-serif;
   box-sizing: border-box;
@@ -32,7 +31,6 @@ a {
     width: 100%;
     z-index: 2;
   }
-
   .wrap .header .sweetaste {
     margin: 3px 0;
     background-image: url("../img/logotype-sm-dark.png");
@@ -40,7 +38,6 @@ a {
     height: 18px;
     width: 115px;
   }
-
   .wrap .header .navBar {
     width: 100%;
     background-color: #EAF0ED;
@@ -52,7 +49,6 @@ a {
     height: 0;
     overflow: hidden;
   }
-
   .wrap .header .navBar a {
     position: relative;
     padding: 0 30px;
@@ -60,7 +56,6 @@ a {
     overflow: hidden;
     transition: 0.5s;
   }
-
   .wrap .header .navBar a:after {
     content: "";
     position: absolute;
@@ -69,45 +64,36 @@ a {
     width: 90%;
     left: 5%;
   }
-
-  .wrap .header #bar:checked~.navBar {
+  .wrap .header #bar:checked ~ .navBar {
     height: 180px;
   }
-
-  .wrap .header #bar:checked~.navBar a {
+  .wrap .header #bar:checked ~ .navBar a {
     padding: 20px 30px;
   }
-
-  .wrap .header #bar:checked~.navBar a:after {
+  .wrap .header #bar:checked ~ .navBar a:after {
     border-bottom: 2px solid #3F5D45;
   }
-
-  .wrap .header #bar:checked~.navBar a:hover {
+  .wrap .header #bar:checked ~ .navBar a:hover {
     background-color: #3F5D45;
     color: white;
   }
-
-  .wrap .header #bar:checked~.navBar a:hover:after {
+  .wrap .header #bar:checked ~ .navBar a:hover:after {
     border-bottom: 2px solid white;
   }
-
   .wrap .mainImg {
     margin-top: 86px;
     background-size: cover;
     background-position: center;
     height: 277px;
   }
-
   .wrap .contentCenter {
     display: flex;
     justify-content: center;
   }
-
   .wrap .contentCenter .maincontentCenter {
     width: 100%;
     display: flex;
   }
-
   .wrap .contentCenter .maincontentCenter li {
     height: 180px;
     width: 33.3%;
@@ -115,11 +101,9 @@ a {
     overflow: hidden;
     border-left: 1px solid white;
   }
-
   .wrap .contentCenter .maincontentCenter li a {
     display: flex;
   }
-
   .wrap .contentCenter .maincontentCenter li a .bgImg {
     position: absolute;
     background-size: cover;
@@ -129,7 +113,6 @@ a {
     transition: 0.5s;
     filter: blur(5px);
   }
-
   .wrap .contentCenter .maincontentCenter li a .bg {
     background: #3F5D45;
     position: absolute;
@@ -141,7 +124,6 @@ a {
     transition: 0.5s;
     z-index: 1;
   }
-
   .wrap .contentCenter .maincontentCenter li a h2 {
     position: absolute;
     display: flex;
@@ -155,66 +137,54 @@ a {
     line-height: 24px;
     z-index: 2;
   }
-
   .wrap .contentCenter .maincontentCenter li a:hover .bgImg {
     filter: blur(1px);
   }
-
   .wrap .contentCenter .maincontentCenter li a:hover .bg {
     opacity: 0.5;
     background: #FFE180;
   }
-
   .wrap .contentCenter .maincontentCenter li a:hover h2 {
     color: #3F5D45;
     line-height: 30px;
     font-size: 24px;
   }
-
   .wrap .why {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
   }
-
   .wrap .why .Img {
     background-position: center;
     background-size: cover;
     height: 250px;
     width: 100%;
   }
-
   .wrap .why .Word {
     width: 100%;
     background-color: #EAF0ED;
     padding: 30px;
   }
-
   .wrap .why .Word p {
     font-size: 16px;
     line-height: 32px;
     color: #809784;
   }
-
   .wrap .why h3 {
     order: -1;
     padding: 30px 0;
   }
-
   .wrap .why .commodity {
     margin-bottom: 30px;
     width: 315px;
   }
-
   .wrap .why .commodity .commodityView {
     position: relative;
   }
-
   .wrap .why .commodity .commodityView .comImg {
     width: 100%;
     height: 315px;
   }
-
   .wrap .why .commodity .commodityView .comImg .hot {
     position: absolute;
     top: 0;
@@ -223,7 +193,6 @@ a {
     height: 107px;
     background-color: #3f5d45;
   }
-
   .wrap .why .commodity .commodityView .comImg .hot::after {
     content: "本日精選";
     position: absolute;
@@ -234,13 +203,11 @@ a {
     z-index: 1;
     padding: 20px 9px;
   }
-
   .wrap .why .commodity .commodityView .comImg .love {
     position: absolute;
     top: 19px;
     left: 270px;
   }
-
   .wrap .why .commodity .button {
     font-size: 20px;
     line-height: 20px;
@@ -248,49 +215,40 @@ a {
     padding: 15px;
     border: 1px solid #EAF0ED;
   }
-
   .wrap .why .commodity .codata {
     display: flex;
   }
-
   .wrap .why .commodity .codata h3 {
     width: 58%;
   }
-
   .wrap .why .commodity .codata p {
     width: 42%;
     line-height: 24px;
   }
-
   .wrap .why .commodity .buy {
     background: #EAF0ED;
     font-size: 24px;
   }
-
   .wrap .menu .menuImg {
     margin: 30px auto;
     width: 209px;
     height: 59px;
     background-image: url("../img/sm-橫式-想吃甜點是不需要理由的.png");
   }
-
   .wrap .menu .order {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     max-width: 940px;
   }
-
   .wrap .menu .order .button {
     width: 300px;
     text-align: center;
     border: 1px solid #eaf0ed;
   }
-
   .wrap .menu .order .dessert {
     position: relative;
   }
-
   .wrap .menu .order .dessert .hot {
     position: absolute;
     top: 0;
@@ -302,33 +260,28 @@ a {
     color: white;
     background-color: #3F5D45;
   }
-
   .wrap .menu .order .dessert .love {
     position: absolute;
     top: 19px;
     right: 22px;
   }
-
   .wrap .menu .order .dessertData {
     max-width: 300px;
     display: flex;
     flex-wrap: wrap;
   }
-
   .wrap .menu .order .dessertData .name {
     width: 173px;
     font-size: 20px;
     line-height: 20px;
     padding: 18px 0;
   }
-
   .wrap .menu .order .dessertData .price {
     width: 127px;
     font-size: 20px;
     line-height: 24px;
     padding: 16px 0;
   }
-
   .wrap .menu .order .dessertData .buy {
     font-size: 24px;
     line-height: 20px;
@@ -336,7 +289,6 @@ a {
     background-color: #EAF0ED;
     margin-bottom: 20px;
   }
-
   .wrap .menu .order .dessertData .buy:hover {
     background-color: #3F5D45;
     color: white;
@@ -351,31 +303,26 @@ a {
     align-items: center;
     background-color: #3F5D45;
   }
-
   .subscription p {
     margin-left: 20px;
     font-size: 24px;
     color: white;
   }
-
   .subscription .mail {
     margin-top: 30px;
     display: flex;
     background-color: #EAF0ED;
     background-color: #fee;
   }
-
   .subscription .mail .icon {
     padding: 16px 20px;
     background-color: #EAF0ED;
   }
-
   .subscription .mail input {
     width: 100%;
     border: none;
     background-color: #EAF0ED;
   }
-
   .subscription .mail a.icon {
     background-color: #FFE180;
   }
@@ -384,7 +331,6 @@ a {
     padding: 39px 30px 37px;
     background-color: #EAF0ED;
   }
-
   .myData .text .logo {
     margin-bottom: 39px;
     background-image: url("../img/logotype-lg-dark.png");
@@ -392,12 +338,10 @@ a {
     width: 171px;
     height: 27px;
   }
-
   .myData .text p {
     font-size: 16px;
     line-height: 24px;
   }
-
   .myData .img {
     display: none;
   }
@@ -406,18 +350,15 @@ a {
     padding: 30px 30px;
     background-color: #EAF0ED;
   }
-
   .footer .icon {
     margin: 0 0 23px 8px;
     display: block;
   }
-
   .footer p {
     font-size: 16px;
     line-height: 19px;
   }
 }
-
 @media screen and (min-width: 600px) {
   .mo {
     display: none;
@@ -427,32 +368,26 @@ a {
     margin: auto;
     max-width: 940px;
   }
-
   .wrap .header {
     margin: 30px 0;
     display: flex;
   }
-
   .wrap .header .topMenuBtn {
     display: none;
   }
-
   .wrap .header h1 {
     margin-right: auto;
   }
-
   .wrap .header h1 .sweetaste {
     background-image: url("../img/logo-all-dark.png");
     background-position: center;
     height: 40px;
     width: 220px;
   }
-
   .wrap .header .navBar {
     display: flex;
     justify-content: space-between;
   }
-
   .wrap .header .navBar li a {
     margin: 0 30px;
     font-size: 16px;
@@ -460,7 +395,6 @@ a {
     align-items: center;
     position: relative;
   }
-
   .wrap .header .navBar li a::after {
     content: "";
     position: absolute;
@@ -470,21 +404,17 @@ a {
     transition: 0.4s;
     left: 50%;
   }
-
   .wrap .header .navBar li a:hover:after {
     left: -50%;
     width: 200%;
   }
-
   .wrap .header .shopping_cart {
     padding-left: 49px;
   }
-
   .wrap .header .shopping_cart span {
     line-height: 40px;
     position: relative;
   }
-
   .wrap .header .shopping_cart span::after {
     content: "";
     position: absolute;
@@ -494,39 +424,32 @@ a {
     transition: 0.4s;
     right: 0;
   }
-
   .wrap .header .shopping_cart span:hover:after {
     width: 150%;
   }
-
   .wrap .mainImg {
     background-size: cover;
     background-position: center;
     height: 496px;
   }
-
   .wrap .contentCenter {
     display: flex;
     justify-content: center;
     margin-top: -60px;
   }
-
   .wrap .contentCenter .maincontentCenter {
     width: 85%;
     display: flex;
   }
-
   .wrap .contentCenter .maincontentCenter li {
     height: 256px;
     width: 33.3%;
     position: relative;
     overflow: hidden;
   }
-
   .wrap .contentCenter .maincontentCenter li a {
     display: flex;
   }
-
   .wrap .contentCenter .maincontentCenter li a .bgImg {
     position: absolute;
     background-size: cover;
@@ -536,7 +459,6 @@ a {
     transition: 0.5s;
     filter: blur(5px);
   }
-
   .wrap .contentCenter .maincontentCenter li a .bg {
     background: #3F5D45;
     position: absolute;
@@ -548,7 +470,6 @@ a {
     transition: 0.5s;
     z-index: 1;
   }
-
   .wrap .contentCenter .maincontentCenter li a h2 {
     position: absolute;
     display: flex;
@@ -562,29 +483,24 @@ a {
     line-height: 24px;
     z-index: 2;
   }
-
   .wrap .contentCenter .maincontentCenter li a:hover .bgImg {
     filter: blur(1px);
   }
-
   .wrap .contentCenter .maincontentCenter li a:hover .bg {
     opacity: 0.5;
     background: #FFE180;
   }
-
   .wrap .contentCenter .maincontentCenter li a:hover h2 {
     color: #3F5D45;
     line-height: 30px;
     font-size: 24px;
   }
-
   .wrap .why {
     display: flex;
     margin-top: 60px;
     justify-content: space-between;
     position: relative;
   }
-
   .wrap .why::before {
     content: "";
     position: absolute;
@@ -595,7 +511,6 @@ a {
     z-index: -1;
     left: -100%;
   }
-
   .wrap .why::after {
     content: "";
     position: absolute;
@@ -605,43 +520,35 @@ a {
     background-color: #EAF0ED;
     z-index: -1;
   }
-
   .wrap .why .Img {
     background-position: center;
     height: 460px;
     width: 460px;
   }
-
   .wrap .why .Word {
     writing-mode: vertical-rl;
     padding: 90px 0px;
     max-height: 460px;
   }
-
   .wrap .why .Word p {
     font-size: 16px;
     line-height: 30px;
     color: #809784;
   }
-
   .wrap .why .eat.Img {
     order: 3;
   }
-
   .wrap .why .commodity {
     margin-bottom: 30px;
     width: 315px;
   }
-
   .wrap .why .commodity .commodityView {
     position: relative;
   }
-
   .wrap .why .commodity .commodityView .comImg {
     width: 100%;
     height: 315px;
   }
-
   .wrap .why .commodity .commodityView .comImg .hot {
     position: absolute;
     top: 0;
@@ -650,7 +557,6 @@ a {
     height: 107px;
     background-color: #3f5d45;
   }
-
   .wrap .why .commodity .commodityView .comImg .hot::after {
     content: "本日精選";
     position: absolute;
@@ -661,13 +567,11 @@ a {
     z-index: 1;
     padding: 20px 9px;
   }
-
   .wrap .why .commodity .commodityView .comImg .love {
     position: absolute;
     top: 19px;
     left: 270px;
   }
-
   .wrap .why .commodity .button {
     font-size: 20px;
     line-height: 20px;
@@ -675,49 +579,40 @@ a {
     padding: 15px;
     border: 1px solid #EAF0ED;
   }
-
   .wrap .why .commodity .codata {
     display: flex;
   }
-
   .wrap .why .commodity .codata h3 {
     width: 58%;
   }
-
   .wrap .why .commodity .codata p {
     width: 42%;
     line-height: 24px;
   }
-
   .wrap .why .commodity .buy {
     background: #EAF0ED;
     font-size: 24px;
   }
-
   .wrap .menu .menuImg {
     margin: 80px auto;
     width: 89px;
     height: 328px;
     background-image: url("../img/lg-想吃甜點是不需要理由的.png");
   }
-
   .wrap .menu .order {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     max-width: 940px;
   }
-
   .wrap .menu .order .button {
     width: 300px;
     text-align: center;
     border: 1px solid #eaf0ed;
   }
-
   .wrap .menu .order .dessert {
     position: relative;
   }
-
   .wrap .menu .order .dessert .hot {
     position: absolute;
     top: 0;
@@ -729,33 +624,28 @@ a {
     color: white;
     background-color: #3F5D45;
   }
-
   .wrap .menu .order .dessert .love {
     position: absolute;
     top: 19px;
     right: 22px;
   }
-
   .wrap .menu .order .dessertData {
     max-width: 300px;
     display: flex;
     flex-wrap: wrap;
   }
-
   .wrap .menu .order .dessertData .name {
     width: 173px;
     font-size: 20px;
     line-height: 20px;
     padding: 18px 0;
   }
-
   .wrap .menu .order .dessertData .price {
     width: 127px;
     font-size: 20px;
     line-height: 24px;
     padding: 16px 0;
   }
-
   .wrap .menu .order .dessertData .buy {
     font-size: 24px;
     line-height: 20px;
@@ -763,7 +653,6 @@ a {
     background-color: #EAF0ED;
     margin-bottom: 20px;
   }
-
   .wrap .menu .order .dessertData .buy:hover {
     background-color: #3F5D45;
     color: white;
@@ -777,30 +666,24 @@ a {
     align-items: center;
     background-color: #3F5D45;
   }
-
   .subscription p {
     margin: 0 auto 0 20px;
     font-size: 24px;
     color: white;
   }
-
   .subscription .mail {
     display: flex;
     background-color: #EAF0ED;
-    width: 100%;
   }
-
   .subscription .mail .icon {
     padding: 16px 20px;
     background-color: #EAF0ED;
   }
-
   .subscription .mail input {
     width: 252px;
     border: none;
     background-color: #EAF0ED;
   }
-
   .subscription .mail a.icon {
     background-color: #FFE180;
   }
@@ -810,25 +693,21 @@ a {
     margin: 39px 122px 0;
     justify-content: space-between;
   }
-
   .myData .text {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
   }
-
   .myData .text .logo {
     background-image: url("../img/logotype-lg-dark.png");
     background-position: center;
     width: 171px;
     height: 27px;
   }
-
   .myData .text p {
     font-size: 16px;
     line-height: 24px;
   }
-
   .myData .img {
     background-image: url("../img/sm-今天是個吃甜點的好日子.png");
     background-position: center;
@@ -841,12 +720,10 @@ a {
     display: flex;
     justify-content: space-between;
   }
-
   .footer .icon {
     margin-right: 8px;
     display: block;
   }
-
   .footer p {
     font-size: 16px;
     line-height: 19px;
